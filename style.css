@@ -14,6 +14,14 @@ body.Menu {
     background-size: cover;
 }
 
+body.Restaurant {
+    background-image: url('pictures/restaurant.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .jumbotron {
     background: black;
     background-size: cover;
@@ -175,12 +183,4 @@ h6 {
 
 .card-body#text-truncate {
     text-decoration: white;
-}
-
-body.Restaurant {
-    background-image: url('pictures/restaurant.jpg');
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
