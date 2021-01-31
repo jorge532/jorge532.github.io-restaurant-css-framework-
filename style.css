@@ -1,182 +1,190 @@
-    body.Welcome {
-        background-image: url('pictures/sombrero.jpg');
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    body.Menu {
-        background-image: url('pictures/food.jpg');
-        background-position: center;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    . .jumbotron {
-        background: black;
-        background-size: cover;
-        opacity: 0.7;
-    }
-    
-    .jumbotron h1 {
-        color: white;
+body.Welcome {
+    background-image: url('pictures/sombrero.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.Menu {
+    background-image: url('pictures/food.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbotron {
+    background: black;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+.jumbotron h1 {
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.jumbotron p {
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    font-size: 25px
+}
+
+.container-fluid {
+    background: black;
+    background-size: cover;
+    opacity: 0.8;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 25.5vw;
+}
+
+.card {
+    background-color: black;
+    opacity: 0.8;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+}
+
+.card h5 {
+    color: white;
+    font-weight: bold;
+    font size: 18px;
+}
+
+.card p {
+    color: white;
+    font-weight: bold;
+}
+
+#fa-facebook-square {
+    text-decoration: white;
+    opacity: 1.0;
+}
+
+.footer-dark {
+    background-color: black;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+.footer-dark h3 {
+    color: white;
+    opacity: 0.6;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 16px
+}
+
+.footer-dark ul {
+    color: white padding: 0;
+    opacity: 0, 6;
+    list-style: none;
+    line-height: 1.6;
+    font-size: 14px;
+    margin-bottom: 0
+}
+
+.footer-dark ul a {
+    opacity: 0.6;
+    color: white;
+    text-decoration: none;
+}
+
+.footer-dark ul a:hover {
+    opacity: 0.6
+}
+
+@media (max-width:767px) {
+    .footer-dark .item:not(.social) {
         text-align: center;
-        font-weight: 100;
-        font-size: 50px;
+        padding-bottom: 20px
     }
-    
-    .jumbotron p {
-        color: white;
-        text-align: center;
-        font-weight: 100;
-        font-size: 25px
-    }
-    
-    .container-fluid {
-        background: black;
-        background-size: cover;
-        opacity: 0.8;
-        text-align: center;
-    }
-    
-    h1 {
-        text-align: center;
-        color: white;
-        font-size: 25.5vw;
-    }
-    
-    .card {
-        background-color: black;
-        opacity: 0.8;
-    }
-    
-    p,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: white;
-    }
-    
-    .card h5 {
-        color: white;
-        font-weight: bold;
-        font size: 18px;
-    }
-    
-    .card p {
-        color: white;
-        font-weight: bold;
-    }
-    
-    #fa-facebook-square {
-        text-decoration: white;
-        opacity: 1.0;
-    }
-    
-    .footer-dark {
-        background-color: black;
-        background-size: cover;
-        opacity: 0.8;
-    }
-    
-    .footer-dark h3 {
-        color: white;
-        opacity: 0.6;
-        margin-top: 0;
-        margin-bottom: 12px;
-        font-weight: bold;
-        font-size: 16px
-    }
-    
-    .footer-dark ul {
-        color: white padding: 0;
-        opacity: 0, 6;
-        list-style: none;
-        line-height: 1.6;
-        font-size: 14px;
-        margin-bottom: 0
-    }
-    
-    .footer-dark ul a {
-        opacity: 0.6;
-        color: white;
-        text-decoration: none;
-    }
-    
-    .footer-dark ul a:hover {
-        opacity: 0.6
-    }
-    
-    @media (max-width:767px) {
-        .footer-dark .item:not(.social) {
-            text-align: center;
-            padding-bottom: 20px
-        }
-    }
-    
+}
+
+.footer-dark .item.text {
+    margin-bottom: 36px
+}
+
+@media (max-width:767px) {
     .footer-dark .item.text {
-        margin-bottom: 36px
-    }
-    
-    @media (max-width:767px) {
-        .footer-dark .item.text {
-            margin-bottom: 0
-        }
-    }
-    
-    .footer-dark .item.text p {
-        color: white;
-        opacity: 0.6;
         margin-bottom: 0
     }
-    
+}
+
+.footer-dark .item.text p {
+    color: white;
+    opacity: 0.6;
+    margin-bottom: 0
+}
+
+.footer-dark .item.social {
+    text-align: center
+}
+
+@media (max-width:991px) {
     .footer-dark .item.social {
-        text-align: center
-    }
-    
-    @media (max-width:991px) {
-        .footer-dark .item.social {
-            text-align: center;
-            margin-top: 20px
-        }
-    }
-    
-    .footer-dark .item.social>a {
-        font-size: 25px;
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        display: inline-block;
         text-align: center;
-        border-radius: 50%;
-        margin: 0 8px;
-        color: #fff;
-        opacity: 0.6
+        margin-top: 20px
     }
-    
-    .footer-dark .item.social>a:hover {
-        opacity: 0.6
+}
+
+.footer-dark .item.social>a {
+    font-size: 25px;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    color: #fff;
+    opacity: 0.6
+}
+
+.footer-dark .item.social>a:hover {
+    opacity: 0.6
+}
+
+.card-columns.text-truncate h6 {
+    color: white;
+    font-weight: bold;
+}
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
     }
-    
-    .card-columns.text-truncate h6 {
-        color: white;
-        font-weight: bold;
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
     }
-    
-    .card-columns {
-        @include media-breakpoint-only(lg) {
-            column-count: 4;
-        }
-        @include media-breakpoint-only(xl) {
-            column-count: 5;
-        }
-    }
-    
-    .card-body#text-truncate {
-        text-decoration: white;
-    }
+}
+
+.card-body#text-truncate {
+    text-decoration: white;
+}
+
+.body.Restaurant {
+    background-image: url('pictures/restaurant.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
