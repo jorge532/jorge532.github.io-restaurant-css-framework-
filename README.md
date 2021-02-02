@@ -1,6 +1,6 @@
 # restaurant-css-framework
 
-(hover to see the title text):
+(El Jorge Hasselt):
 
 
 ![alt text](https://github.com/jorge532/restaurant-css-framework/blob/main/pictures/hasselt.jpg "Logo Title Text 1")
