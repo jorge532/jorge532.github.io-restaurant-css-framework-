@@ -1,9 +1,9 @@
 # restaurant-css-framework
 
-(El Jorge Hasselt):
 
 
-![alt text](https://github.com/jorge532/restaurant-css-framework/blob/main/pictures/hasselt.jpg "Logo Title Text 1")
+
+![El Jorge Hasselt](https://github.com/jorge532/restaurant-css-framework/blob/main/pictures/hasselt.jpg "Logo Title Text 1")
 
 ## Website Url
 
