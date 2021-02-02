@@ -2,7 +2,7 @@
 
 (hover to see the title text):
 
-Inline-style: 
+
 ![alt text](https://github.com/jorge532/restaurant-css-framework/blob/main/pictures/hasselt.jpg "Logo Title Text 1")
 
 ## Website Url
