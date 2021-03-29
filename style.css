@@ -1,4 +1,4 @@
-body.Welcome {
+body.index {
     background-image: url('pictures/sombrero.jpg');
     background-position: center;
     background-attachment: fixed;
@@ -239,4 +239,8 @@ button {
 
 @media screen and (min-width:320px) and (max-width:640px) {
     /* for screens that are at least 320 pixels wide but less than or equal to 640 pixels wide */
+}
+
+.form-invalid {
+    outline: 1px solid red;
 }

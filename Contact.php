@@ -14,6 +14,36 @@
 
     <title>Welcome</title>
 </head>
+<?php
+$message_sent = false;
+if (isset($_POST['email']) && $_POST['email'] != '') {
+
+    if (filter_var(
+        $_POST['name'],
+        FILTER_VALIDATE_EMAIL
+    )) {
+
+        // submit the form
+        $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $messageSubject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $to = "jorgevandereyken@gmail.com";
+        $body = "";
+
+        $body .= "From: " . $userName . "\r\n";
+        $body .= "Email: " . $userEmail . "\r\n";
+        $body .= "Message: " . $message . "\r\n";
+
+        // mail($to,$messageSubject,$body);
+
+        $message_sent = true;
+    } else {
+        $invalid_class_name = "form-invalid";
+    }
+}
+?>
 
 <body class="Contact">
     <!-- Optional JavaScript -->
@@ -38,7 +68,7 @@
                 <div class="collapse navbar-collapse" id="navbarColor03">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="Welcome.html">Welcome
+                            <a class="nav-link" href="index.html">Welcome
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
@@ -52,7 +82,7 @@
                             <a class="nav-link" href="Pictures1.html">Pictures</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Contact.html">Contact</a>
+                            <a class="nav-link" href="Contact.php">Contact</a>
                         </li>
 
                     </ul>
@@ -75,66 +105,77 @@
                 <h1 class="display-3 ">Contact</h1>
                 <hr class="my-4 ">
                 <p>For questions? For answers!</p>
+                <?php
+                if ($message_sent) :
+                ?>
+                    <h3>Thanks, we will be in touch!</h3>
+
+                <?php
+                else :
+
+                ?>
+
+                    <div class="container1">
+                        <form action="Contact.php" method="POST">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="well well-sm">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">Name</label>
+                                                        <input type ="text" class="form-control" <?= $invalid_class_name ?? "" ?> id="name" name="name" placeholder="Enter name" required="required" />
+                                                    </div>
 
 
-                <div class="container1">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="well well-sm">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="name">Name</label>
-                                                <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
-                                            </div>
 
-                                            <div class="form-group"><label for="name">
-                                                    First Name</label>
-                                                <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
-                                            </div>
+                                                    <div class="form-group">
 
-                                            <div class="form-group">
-                                                <label for="email">
-                                                    Email Address</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><span
-                                                            class="glyphicon glyphicon-envelope"></span>
-                                                    </span>
-                                                    <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" />
+                                                        <label for="email">
+                                                            Email Address</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                                            </span>
+                                                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required="required" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">a
+                                                        <label for="subject">
+                                                            Subject</label>
+                                                        <select id="subject" name="subject" class="form-control" required="required">
+                                                            <option value="na" selected="">Choose One:</option>
+                                                            <option value="service">Reservations</option>
+                                                            <option value="suggestions">Suggestions</option>
+                                                            <option value="product">Questions and complaints</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="name">
+                                                            Message</label>
+                                                        <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <form>
+                                                        <i class="fas fa-align-left"><button type="submit">
+                                                                <p>SEND</p>
+                                                            </button></i>
+                                                    </form>
                                                 </div>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="subject">
-                                                    Subject</label>
-                                                <select id="subject" name="subject" class="form-control" required="required">
-                                                    <option value="na" selected="">Choose One:</option>
-                                                    <option value="service">Reservations</option>
-                                                    <option value="suggestions">Suggestions</option>
-                                                    <option value="product">Questions and complaints</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="name">
-                                                    Message</label>
-                                                <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required" placeholder="Message"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <form>
-                                                <i class="fas fa-align-left"><button type="submit">
-                                                        <p>SEND</p>
-                                                    </button></i>
-                                            </form>
-                                        </div>
+                                        </form>
                                     </div>
-                                </form>
+                                </div>
                             </div>
-                        </div>
+                        <?php
+                    endif;
+                        ?>
+                        
                         <div class="col-md-4">
-                            <form>
+                        <form>
                                 <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
                                 <address>
                                     <strong>El Jorge</strong><br>
@@ -151,12 +192,12 @@
                             </form>
                         </div>
                     </div>
-                </div>
+            </div>
 
 
-                <div>
+            </div>
 
-                </div>
+            </div>
         </header>
     </header>
     <section>
